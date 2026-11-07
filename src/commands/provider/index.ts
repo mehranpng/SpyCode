@@ -44,7 +44,7 @@ export function healthCheckTimeoutMs(): number {
 }
 
 /** How a provider's key is sourced, for `list` - never the key itself, not even its last characters. */
-function keySource(p: StoredProviderConfig): string {
+export function keySource(p: StoredProviderConfig): string {
   // A hand-edited / corrupted entry can carry an unknown type: fail with
   // the same clean error as resolveProviderSelection, not a raw TypeError
   // off the undefined defaults lookup below.
